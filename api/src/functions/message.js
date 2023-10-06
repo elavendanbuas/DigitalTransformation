@@ -1,4 +1,4 @@
-const { app } = require('@azure/functions');
+/*const { app } = require('@azure/functions');
 
 app.http('message', {
     methods: ['GET', 'POST'],
@@ -11,3 +11,9 @@ app.http('message', {
         return { body: `Hello, ${name}!` };
     }
 });
+*/
+module.exports = async function (context, req) {
+    context.res.json({
+        text: "Hello from the API"
+    });
+};
